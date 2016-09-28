@@ -46,7 +46,7 @@ def split(M_1, M):
     x=[]
     y=[]
     c=len(M)
-    for i in range(1,c):
+    for i in range(c):
         x.append(i+1)
         y.append((M[i]-M_1[i])/M[i]*100)
     return x,y
@@ -61,6 +61,6 @@ if __name__=="__main__":
     myplot.plot(m0x,m0y,label="M0")
     myplot.plot(m1x,m1y,label="M1")
     myplot.plot(m2x,m2y,label="M2")
-    myplot.Show(title=str(2016)+u'货币供应量同比增长率M0，M1与M2对比', xlabel=u'月份', ylabel=u'月环比增长率',legend=True)
+    myplot.Show(title=str(2016)+u'货币供应量同比增长率M0，M1与M2对比', xlabel=u'月份', ylabel=u'月同比增长率',legend=True)
 
     
