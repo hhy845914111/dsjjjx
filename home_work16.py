@@ -15,7 +15,6 @@ def test(year1, year2, alpha1, alpha2):
     print "在%f的水平上，两个样本方差相同统计%s" % (alpha1, choice(p1, alpha1, "显著", "不显著"))
     p2 = stats.ttest_ind(rank_1_lst, rank_2_lst, equal_var=choice(p1, alpha1, False, True))[1]
     print "在%f的水平上，两个样本同均值统计%s" % (alpha2, choice(p2, alpha2, "显著", "不显著"))
-    print p2
     return (year1, year2, choice(p2, alpha2, False, True))
     
 def main():
